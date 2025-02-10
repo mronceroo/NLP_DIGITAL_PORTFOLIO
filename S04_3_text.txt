@@ -1,0 +1,9 @@
+Alquiler de coche
+Buenas tardes, soy Alba. He alquilado un coche para el próximo fin de semana y me gustaría saber dónde debo recogerlo. Yo vivo en Barcelona.
+Buenas tardes Alba, muchas gracias por llamar. Yo vivo en un pueblo a 20 minutos de Barcelona. ¿Crees que podrías venir a recogerlo el viernes?
+Depende de a qué hora ya que el viernes trabajo.
+Me vendría bien entre las 17.00h y las 19.00h. ¿Cómo lo tienes?
+Lo tengo complicado, acabo de trabajar a las 18.30 y creo que no me daría tiempo. ¿Cómo te iría el sábado a primera hora?
+Si vinieses antes de las 9.00h me vendría bien.
+Pues si te parece bien, te aviso cuando salga de Barcelona, sobre las 8.00h, así cuando llegues ya está todo listo.
+Genial Alba, quedamos así, te espero el sábado antes de las 9.00h.

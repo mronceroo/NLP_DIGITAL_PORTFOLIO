@@ -7,7 +7,7 @@ class ChessTermApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Chess Terminology Helper")
-        self.root.geometry("800x600")
+        self.root.geometry("600x600")
         
         # Initialize model
         self.model = lms.llm("llama-3.2-1b-instruct")
@@ -21,11 +21,11 @@ class ChessTermApp:
         main_frame.pack(fill=tk.BOTH, expand=True)
 
         # Title
-        title_label = ttk.Label(main_frame, text="Chess Terminology Helper", font=("Helvetica", 16, "bold"))
+        title_label = ttk.Label(main_frame, text="Chess Terminology Helper", font=("Arial", 16, "bold"))
         title_label.pack(pady=10)
 
         # Input area
-        input_frame = ttk.LabelFrame(main_frame, text="Enter a chess term or concept")
+        input_frame = ttk.LabelFrame(main_frame, text="Enter a chess term or concept you want to know")
         input_frame.pack(fill=tk.X, pady=5)
 
         self.term_entry = ttk.Entry(input_frame, width=50)
@@ -39,15 +39,15 @@ class ChessTermApp:
         lang_frame = ttk.Frame(main_frame)
         lang_frame.pack(fill=tk.X, pady=5)
 
-        ttk.Label(lang_frame, text="Translate to:").pack(side=tk.LEFT, padx=5)
+        ttk.Label(lang_frame, text="Select language answer").pack(side=tk.LEFT, padx=5)
 
-        self.language = tk.StringVar(value="English")
+        self.language = tk.StringVar(value="English")#By deafault
         languages = ["English", "Spanish", "French", "German", "Russian", "Italian"]
         self.lang_dropdown = ttk.Combobox(lang_frame, textvariable=self.language, values=languages, state="readonly", width=15)
         self.lang_dropdown.pack(side=tk.LEFT, padx=5)
 
         #Dificulty selector
-        self.level_var = tk.StringVar(value="Beginner")
+        self.level_var = tk.StringVar(value="Beginner")#by default
         levels = ["Beginner", "Intermediate", "Advanced"]
         ttk.Label(lang_frame, text="Explanation Level:").pack(side=tk.LEFT, padx=5)
         self.level_dropdown = ttk.Combobox(lang_frame, textvariable=self.level_var, values=levels, state="readonly", width=15)
@@ -71,8 +71,8 @@ class ChessTermApp:
         # Common chess terms
         terms = [
             "Queen", "Rook", "Aperture", "Defense", 
-            "Castling", "Discovered Check", "Gambit",
-            "Zwischenzug", "Prophylaxis", "Tempo"
+            "Castling", "Importance of the pawn", "Gambit",
+            "Game time", "Sicilian defense", "Italian Opening"
         ]
         
         # Create buttons dynamically

@@ -135,6 +135,15 @@ class ChessTermApp:
             
             If this is not a recognized chess term, please explain that and suggest what the user might have meant.
             """
+            
+            # Call the local LLM through LM Studio
+            response = self.model.respond(prompt)
+            
+            # Update UI in the main thread
+            self.root.after(0, lambda: self._update_result(response))
+            
+        except Exception as e:
+            self.root.after(0, lambda: self._handle_error(str(e)))
 
 
 

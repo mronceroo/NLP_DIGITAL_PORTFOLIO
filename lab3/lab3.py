@@ -52,3 +52,12 @@ class ChessTermApp:
     ttk.Label(lang_frame, text="Explanation Level:").pack(side=tk.LEFT, padx=5)
     self.level_dropdown = ttk.Combobox(lang_frame, textvariable=self.level_var, values=levels, state="readonly", width=15)
     self.level_dropdown.pack(side=tk.LEFT, padx=5)
+    
+    #Search for common terms in Chess button
+    terms_frame = ttk.LabelFrame(main_frame, text="Common Chess Terms")
+    terms_frame.pack(fill=tk.X, pady=5)
+    
+    self.terms_buttons_frame = ttk.Frame(terms_frame)
+    self.terms_buttons_frame.pack(fill=tk.X, padx=5, pady=5)
+
+    

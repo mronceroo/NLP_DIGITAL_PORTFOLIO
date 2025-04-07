@@ -108,6 +108,13 @@ class ChessTermApp:
         self.term_entry.config(state=tk.DISABLED)
         self.lang_dropdown.config(state=tk.DISABLED)
         self.level_dropdown.config(state=tk.DISABLED)
+        
+        # Execute in second plane to not block the grafic interface
+        threading.Thread(
+            target=self._get_explanation,
+            args=(term, language, level),
+            daemon=True
+        ).start()
 
 
 

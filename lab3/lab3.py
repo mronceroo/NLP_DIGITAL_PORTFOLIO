@@ -98,6 +98,16 @@ class ChessTermApp:
         if not term:
             messagebox.showwarning("Empty Term", "Please enter a chess term or select one from the examples.")
             return
+        
+        # Get selected language and level
+        language = self.language.get()
+        level = self.level_var.get()
+        
+        # Disable UI elements during processing
+        self.search_button.config(state=tk.DISABLED)
+        self.term_entry.config(state=tk.DISABLED)
+        self.lang_dropdown.config(state=tk.DISABLED)
+        self.level_dropdown.config(state=tk.DISABLED)
 
 
 

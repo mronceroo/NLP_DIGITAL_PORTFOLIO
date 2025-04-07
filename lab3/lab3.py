@@ -115,6 +115,26 @@ class ChessTermApp:
             args=(term, language, level),
             daemon=True
         ).start()
+        
+    def _get_explanation(self, term, language, level):
+        try:
+            # Create system prompt for the LLM
+            prompt = f"""
+            Please explain the chess term or concept: "{term}"
+            
+            Provide the explanation in {language}.
+            
+            The explanation should be suitable for a {level.lower()} chess player.
+            
+            Include:
+            1. A clear definition of the term
+            2. When and how it's typically used in chess
+            3. An example position or scenario (described in words)
+            4. The term in its original language if applicable
+            5. Related chess terms
+            
+            If this is not a recognized chess term, please explain that and suggest what the user might have meant.
+            """
 
 
 

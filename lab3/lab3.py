@@ -59,5 +59,14 @@ class ChessTermApp:
     
     self.terms_buttons_frame = ttk.Frame(terms_frame)
     self.terms_buttons_frame.pack(fill=tk.X, padx=5, pady=5)
+    
+    # Results area
+    results_frame = ttk.LabelFrame(main_frame, text="Explanation")
+    results_frame.pack(fill=tk.BOTH, expand=True, pady=5)
+    
+    self.result_text = scrolledtext.ScrolledText(results_frame, wrap=tk.WORD)
+    self.result_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+    
+    
 
     

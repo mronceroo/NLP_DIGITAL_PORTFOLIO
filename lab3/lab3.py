@@ -45,3 +45,10 @@ class ChessTermApp:
     languages = ["English", "Spanish", "French", "German", "Russian", "Italian"]
     self.lang_dropdown = ttk.Combobox(lang_frame, textvariable=self.language, values=languages, state="readonly", width=15)
     self.lang_dropdown.pack(side=tk.LEFT, padx=5)
+    
+    #Dificulty selector
+    self.level_var = tk.StringVar(value="Beginner")
+    levels = ["Beginner", "Intermediate", "Advanced"]
+    ttk.Label(lang_frame, text="Explanation Level:").pack(side=tk.LEFT, padx=5)
+    self.level_dropdown = ttk.Combobox(lang_frame, textvariable=self.level_var, values=levels, state="readonly", width=15)
+    self.level_dropdown.pack(side=tk.LEFT, padx=5)

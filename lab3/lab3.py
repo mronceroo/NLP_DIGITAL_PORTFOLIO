@@ -144,6 +144,17 @@ class ChessTermApp:
             
         except Exception as e:
             self.root.after(0, lambda: self._handle_error(str(e)))
+            
+    def _update_result(self, explanation):
+        # Update the result text
+        self.result_text.delete("1.0", tk.END)
+        self.result_text.insert(tk.END, explanation)
+        
+        # Re-enable UI elements
+        self.search_button.config(state=tk.NORMAL)
+        self.term_entry.config(state=tk.NORMAL)
+        self.lang_dropdown.config(state="readonly")
+        self.level_dropdown.config(state="readonly")
 
 
 

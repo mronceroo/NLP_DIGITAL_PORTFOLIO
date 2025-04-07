@@ -71,7 +71,7 @@ class ChessTermApp:
         # Common chess terms
         terms = [
             "Queen", "Rook", "Aperture", "Defense", 
-            "Castling", "Importance of the pawn", "Gambit",
+            "Castling", "Pawn importance", "Gambit",
             "Game time", "Sicilian defense", "Italian Opening"
         ]
         

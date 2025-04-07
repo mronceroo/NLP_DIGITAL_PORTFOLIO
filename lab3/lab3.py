@@ -85,6 +85,19 @@ class ChessTermApp:
                 width=15
             )
             btn.grid(row=row, column=col, padx=5, pady=5, sticky=tk.W)
+    
+    def set_term(self, term):
+        #Set the selected term in the entry field and trigger search
+        self.term_entry.delete(0, tk.END)
+        self.term_entry.insert(0, term)
+        self.explain_term()
+        
+    def explain_term(self):
+        #Process the term and get explanation
+        term = self.term_entry.get().strip()
+        if not term:
+            messagebox.showwarning("Empty Term", "Please enter a chess term or select one from the examples.")
+            return
 
 
 

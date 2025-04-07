@@ -68,12 +68,23 @@ class ChessTermApp:
         self.result_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
     
     def load_example_terms(self):
-        # Common chess terms as examples
+        # Common chess terms
         terms = [
             "Queen", "Rook", "Aperture", "Defense", 
             "Castling", "Discovered Check", "Gambit",
             "Zwischenzug", "Prophylaxis", "Tempo"
         ]
+        
+        # Create buttons dynamically
+        for i, term in enumerate(terms):
+            row, col = divmod(i, 4)
+            btn = ttk.Button(
+                self.terms_buttons_frame, 
+                text=term, 
+                command=lambda t=term: self.set_term(t),
+                width=15
+            )
+            btn.grid(row=row, column=col, padx=5, pady=5, sticky=tk.W)
 
 
 

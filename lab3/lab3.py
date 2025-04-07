@@ -155,6 +155,17 @@ class ChessTermApp:
         self.term_entry.config(state=tk.NORMAL)
         self.lang_dropdown.config(state="readonly")
         self.level_dropdown.config(state="readonly")
+        
+    def _handle_error(self, error_message):
+        # Display error message
+        self.result_text.delete("1.0", tk.END)
+        self.result_text.insert(tk.END, f"An error occurred: {error_message}")
+        
+        # Re-enable UI elements
+        self.search_button.config(state=tk.NORMAL)
+        self.term_entry.config(state=tk.NORMAL)
+        self.lang_dropdown.config(state="readonly")
+        self.level_dropdown.config(state="readonly")
 
 
 

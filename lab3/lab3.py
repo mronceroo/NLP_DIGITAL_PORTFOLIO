@@ -166,6 +166,14 @@ class ChessTermApp:
         self.term_entry.config(state=tk.NORMAL)
         self.lang_dropdown.config(state="readonly")
         self.level_dropdown.config(state="readonly")
+        
+def main():
+    root = tk.Tk()
+    app = ChessTermApp(root)
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
 
 
 

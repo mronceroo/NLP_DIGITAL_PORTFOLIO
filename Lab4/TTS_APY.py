@@ -281,7 +281,7 @@ if __name__ == "__main__":
     voice_id = voice["voice_id"] if voice else "21m00Tcm4TlvDq8ikWAM"  # Default voice if not found
     
     # Example 3: Convert text to speech and save to file
-    text = "Trying the TTS of Elevenlabs"
+    text = "The movement you have to do is b two b three"
     output_file = "elevenlabs_tts_output.mp3"
     
     tts.synthesize_speech(
@@ -292,22 +292,3 @@ if __name__ == "__main__":
         similarity_boost=0.7
     )
     
-    # Example 4: Stream audio (useful for long text)
-    # This example defines a simple callback that prints the chunk size
-    def chunk_received(chunk):
-        print(f"Received audio chunk: {len(chunk)} bytes")
-    
-    long_text = """
-    Trying the TTS of Elevenlabs
-    """
-    
-    streaming_output = "elevenlabs_streaming_output.mp3"
-    tts.synthesize_speech_with_streaming(
-        text=long_text,
-        voice_id=voice_id,
-        output_file=streaming_output,
-        chunk_callback=chunk_received
-    )
-    
-    # Play the audio file
-    # tts.play_audio(audio_file=output_file)

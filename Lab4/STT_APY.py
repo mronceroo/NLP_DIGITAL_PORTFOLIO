@@ -1,11 +1,15 @@
-from openai import OpenAI
+import assemblyai as aai
 
-client = OpenAI()
-audio_file= open(r"C:\Users\manue\OneDrive\Documentos\Universidad\NLP lunes\NLP_DIGITAL_PORTFOLIO\elevenlabs_tts_output.mp3", "rb")
+aai.settings.api_key = "3bc98b278aee480c94f1c77834bf1556"
 
-transcription = client.audio.transcriptions.create(
-    model="gpt-4o-transcribe", 
-    file=audio_file
-)
+# audio_file = "./local_file.mp3"
+audio_file = r"C:\Users\manue\OneDrive\Documentos\Universidad\NLP lunes\NLP_DIGITAL_PORTFOLIO\Lab4\elevenlabs_tts_output.mp3"
 
-print(transcription.text)
+config = aai.TranscriptionConfig(speech_model=aai.SpeechModel.best)
+
+transcript = aai.Transcriber(config=config).transcribe(audio_file)
+
+if transcript.status == "error":
+  raise RuntimeError(f"Transcription failed: {transcript.error}")
+
+print(transcript.text)

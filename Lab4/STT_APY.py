@@ -84,11 +84,11 @@ if __name__ == "__main__":
     # whisper = WhisperSTT()
     
     # Option 2: Provide API key directly
-    whisper = WhisperSTT(api_key="your-openai-api-key")
+    whisper = WhisperSTT(api_key="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")
     
     # Transcribe an audio file
     result = whisper.transcribe(
-        audio_file_path="path/to/your/audio/file.mp3",
+        audio_file_path=r"C:\Users\manue\OneDrive\Documentos\Universidad\NLP lunes\NLP_DIGITAL_PORTFOLIO\Lab4\elevenlabs_tts_output.mp3",
         language="en",  # Optional: specify language
         prompt="This is a conversation about machine learning"  # Optional: context prompt
     )

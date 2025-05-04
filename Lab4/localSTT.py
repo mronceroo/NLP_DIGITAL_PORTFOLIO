@@ -8,7 +8,7 @@ CHUNK = 1024
 FORMAT = pyaudio.paInt16  
 CHANNELS = 1              
 RATE = 16000              
-RECORD_SECONDS = 10        
+RECORD_SECONDS = 5        
 
 p = pyaudio.PyAudio()
 stream = p.open(

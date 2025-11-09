@@ -1,6 +1,6 @@
 from elevenlabs import ElevenLabs
 client = ElevenLabs(
-    api_key="sk_c8be39d0f62a8673b75b988a2432beec3aec896bd5ef0ce5",
+    api_key="",
 )
 
 audio_generator = client.text_to_speech.convert(
